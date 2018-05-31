@@ -1,0 +1,16 @@
+spring:
+  activemq:
+    broker-url: "tcp://localhost:61616"
+    user: "admin"
+    password: "admin"
+
+
+messaging:
+  default:
+    destination:
+      connection:
+        broker-url: ${spring.activemq.broker-url}
+        username: ${spring.activemq.user}
+        password: ${spring.activemq.password}
+      name: "interview-1"
+      type: "Queue"
